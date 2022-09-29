@@ -13,7 +13,7 @@ public class Config {
     private static YamlConfiguration configuration;
     private static File file;
     public static void registerConfiguration() {
-        File dir = new File("./plugins/MBE");
+        File dir = new File("./plugins/Homburg");
         if (!dir.exists()) {
             dir.mkdirs();
         }

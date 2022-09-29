@@ -4,19 +4,17 @@
  * You may not copy, modify, decompile or distribute this code without prior written notice from the author.
  */
 
-package tech.justcoding.homburgplots.utils;
+package tech.justcoding.homburglobby.utils;
 
 import org.bukkit.Color;
 import org.bukkit.DyeColor;
 import org.bukkit.Material;
-import org.bukkit.attribute.Attribute;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.inventory.meta.SkullMeta;
-import org.w3c.dom.Attr;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -245,6 +243,7 @@ public class ItemBuilder {
         ItemMeta im = this.is.getItemMeta();
         im.addItemFlags(itemFlag);
         is.setItemMeta(im);
+        return this;
     }
 
 
