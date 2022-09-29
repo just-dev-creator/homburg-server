@@ -1,0 +1,11 @@
+name: HomburgLobby
+version: '${project.version}'
+main: tech.justcoding.homburglobby.Main
+api-version: 1.19
+commands:
+  build:
+    description: Allows a player to build in the lobby.
+  setspawn:
+    description: Sets the spawn point of the lobby
+  spawn:
+    description: Teleports the player to spawn
