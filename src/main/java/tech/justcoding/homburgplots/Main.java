@@ -8,6 +8,7 @@ import tech.justcoding.homburgplots.plots.PlotBossbar;
 import tech.justcoding.homburgplots.plots.PlotBuildCheck;
 import tech.justcoding.homburgplots.plots.PlotRegistrar;
 import tech.justcoding.homburgplots.plots.SavePlotCommand;
+import tech.justcoding.homburgplots.plots.SpawnPlotProtection;
 import tech.justcoding.homburgplots.recipes.PlotTeleportCompass;
 import tech.justcoding.homburgplots.recipes.RecipeManager;
 import tech.justcoding.homburgplots.utils.Config;
@@ -38,6 +39,7 @@ public final class Main extends JavaPlugin {
         pluginManager.registerEvents(new PlotBossbar(), this);
         pluginManager.registerEvents(new PlotBuildCheck(), this);
         pluginManager.registerEvents(new PlotTeleportCompass(), this);
+        pluginManager.registerEvents(new SpawnPlotProtection(), this);
     }
 
     public static String getPrefix() {
