@@ -35,7 +35,7 @@ public class PlotBossbar implements Listener {
         }
         BossBar bar = playerBars.get(player);
         if (plot == null) {
-            bar.setTitle(ChatColor.DARK_GRAY + "Wildniss");
+            bar.setTitle(ChatColor.DARK_GRAY + "Wildnis");
             bar.setColor(BarColor.GREEN);
             bar.setStyle(BarStyle.SOLID);
         } else {
