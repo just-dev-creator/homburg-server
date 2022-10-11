@@ -7,6 +7,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.entity.EntityChangeBlockEvent;
+import org.bukkit.event.entity.EntityExplodeEvent;
 
 public class SpawnPlotProtection implements Listener {
     @EventHandler
@@ -27,6 +28,13 @@ public class SpawnPlotProtection implements Listener {
 
     @EventHandler
     public void onCreatureSpawn(CreatureSpawnEvent event) {
+        if (PlotRegistrar.spawnPlot.isLocationOnPlot(event.getLocation())) {
+            event.setCancelled(true);
+        }
+    }
+
+    @EventHandler
+    public void onEntityExplode(EntityExplodeEvent event) {
         if (PlotRegistrar.spawnPlot.isLocationOnPlot(event.getLocation())) {
             event.setCancelled(true);
         }
