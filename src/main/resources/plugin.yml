@@ -2,7 +2,11 @@ name: HomburgPlots
 version: '${project.version}'
 main: tech.justcoding.homburgplots.Main
 api-version: 1.19
+depend:
+  - LuckPerms
 authors: [ justCoding ]
 commands:
   manageplot:
     description: Manage plots on the server (add/remove)
+  ping:
+    description: Displays the current ping of a player
