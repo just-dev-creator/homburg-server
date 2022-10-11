@@ -34,10 +34,15 @@ public class Plot {
 
     public boolean isLocationOnPlot(Location location) {
         return location.getBlockX() > this.from_x && location.getBlockZ() > this.from_z &&
-                location.getBlockX() < this.to_x && location.getBlockZ() < this.to_z;
+                location.getBlockX() < this.to_x && location.getBlockZ() < this.to_z && location.getWorld().getName()
+                .equalsIgnoreCase("world");
     }
 
     public String getName() {
         return name;
+    }
+
+    public String getPermissionName() {
+        return permissionName;
     }
 }
