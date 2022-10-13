@@ -1,0 +1,26 @@
+name: Plot server / Compile and test
+on:
+  push:
+    paths-ignore:
+      - 'lobby/**'
+      - 'test/**'
+  pull_request:
+    paths-ignore:
+      - 'lobby/**'
+      - 'test/**'
+jobs:
+  build:
+    name: Build the plugin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: zulu
+          java-version: '17'
+      - name: Build with maven
+        run: mvn clean package
+      - uses: actions/upload-artifact@v2
+        with:
+          path: target/homburgPlots-*.jar
+          name: homburgPlots.jar

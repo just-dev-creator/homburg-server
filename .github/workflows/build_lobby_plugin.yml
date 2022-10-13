@@ -1,0 +1,22 @@
+name: Lobby server / Compile and test
+on:
+  push:
+    paths:
+      - 'lobby/**'
+jobs:
+  build:
+    name: Build the plugin
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: zulu
+          java-version: '17'
+      - name: Build with maven
+        working-directory: lobby
+        run: mvn clean package
+      - uses: actions/upload-artifact@v2
+        with:
+          path: lobby/target/homburgLobby-*.jar
+          name: homburgLobby.jar
