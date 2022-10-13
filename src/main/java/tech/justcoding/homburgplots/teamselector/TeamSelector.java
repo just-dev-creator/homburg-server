@@ -6,8 +6,6 @@
 
 package tech.justcoding.homburgplots.teamselector;
 
-import net.luckperms.api.model.user.User;
-import net.luckperms.api.node.Node;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -25,8 +23,6 @@ import tech.justcoding.homburgplots.Main;
 import tech.justcoding.homburgplots.plots.Plot;
 import tech.justcoding.homburgplots.plots.PlotRegistrar;
 import tech.justcoding.homburgplots.utils.ItemBuilder;
-
-import java.util.Random;
 
 public class TeamSelector implements Listener {
     public static Inventory getSelector() {
