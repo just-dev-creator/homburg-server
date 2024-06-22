@@ -11,12 +11,12 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 public class Plot {
-    private int from_x;
-    private int from_z;
-    private int to_x;
-    private int to_z;
+    protected int from_x;
+    protected int from_z;
+    protected int to_x;
+    protected int to_z;
 
-    private String name;
+    protected String name;
     private String permissionName;
 
     public Plot(int from_x, int from_z, int to_x, int to_z, String name) {
@@ -42,7 +42,20 @@ public class Plot {
         return name;
     }
 
+
     public String getPermissionName() {
         return permissionName;
+    }
+
+    public Location getFrom() {
+        return new Location(Bukkit.getWorld("world"), from_x, 0, from_x);
+    }
+
+    public Location getTo() {
+        return new Location(Bukkit.getWorld("world"), to_x, 0, to_z);
+    }
+
+    public boolean isClassicPlot() {
+        return true;
     }
 }
